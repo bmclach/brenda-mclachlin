@@ -78,13 +78,9 @@ h1 {
 }
 
 iframe {
-  margin-left: 10%;
+  margin-left: 100px;
   margin-bottom: 100px;
 }
-
-#frame {
-  margin: 0px;
-  padding: 0px;
 
 #footer {
   background: #D17523;
