@@ -1,0 +1,45 @@
+<html>
+  <head>
+  </head>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+  <script language="JavaScript">
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name");
+frmvalidator.addValidation("email","req","Please provide your email");
+frmvalidator.addValidation("email","email",
+  "Please enter a valid email address");
+</script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <h1> Brenda McLachlin </h1>
+  <body>
+    <div id = "nav">
+    <ul>
+      <a href = "../index.html"> <li> Home </li></a>
+      <a href = "#"> <li> Get to Know </li></a>
+      <a href = "#"><li> Background & Qualifications </li></a>
+      <a href = "#"><li> Sample Lesson Plan </li> </a>
+      <a href = "#"><li> Availability </li></a>
+      <a href = "#" id = "list-bottom"><li>Contact  </li></a>
+    </ul>
+    </div>
+    
+    <p id = "title"> Contact </p>
+    
+    <form method="post" name="contact_form"
+action="contact-form-handler.php">
+    Your Name:
+    <input type="text" name="name">
+
+    Email Address:
+    <input type="text" name="email">
+
+    Message:
+    <textarea name="message"></textarea>
+
+    <input type="submit" value="Submit">
+</form>	
+    
+  <footer id = "footer">© Oh yeah did I mention I made this website myself from scratch? 2021</footer>
+  </body>
+</html>
