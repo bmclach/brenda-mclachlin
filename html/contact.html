@@ -30,21 +30,23 @@
       <p> Email: bmclach3@gmail.com</p>
       <p> Cell Number: 519-709-1063</p>
     </div>
-    <form method="POST" name="contactform" action="contact-form-handler.php"> 
-<p>
-<label for='name'>Your Name:</label> <br>
-<input type="text" name="name">
-</p>
-<p>
-<label for='email'>Email Address:</label> <br>
-<input type="text" name="email"> <br>
-</p>
-<p>
-<label for='message'>Message:</label> <br>
-<textarea name="message"></textarea>
-</p>
-<input type="submit" value="Submit"><br>
-</form>
+       <form method="POST" name="contactform"
+action="contact-form-handler.php" id = "form">
+     <p> Your Name:
+    <input type="text" name="name">
+      </p>
+      <p>
+      Email Address:
+    <input type="text" name="email">
+      </p>
+      <p>
+      Message:
+    <textarea id = "message" name="message"></textarea>
+      </p>
+      <p id = "submit">
+    <input type="submit" value="Submit" >
+      </p>
+</form>	
 
     <script language="JavaScript">
 var frmvalidator  = new Validator("contactform");
