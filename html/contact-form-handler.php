@@ -1,6 +1,6 @@
 <?php 
 $errors = '';
-$myemail = 'bmclach3@gmail.com'
+$myemail = 'bmclach3@gmail.com';//<-----Put Your email address here.
 if(empty($_POST['name'])  || 
    empty($_POST['email']) || 
    empty($_POST['message']))
@@ -20,30 +20,19 @@ $email_address))
 }
 
 if( empty($errors))
-
 {
-
-$to = $myemail;
-
-$email_subject = "$name sent you an email!"
-
-$email_body = "Someone wants to know about piano lessons! Yay!!!"
-
-" Here are the details:\n Name: $name \n ".
-
-"Email: $email_address\n Message \n $message";
-
-$headers = "From: $myemail\n";
-
-$headers .= "Reply-To: $email_address";
-
-mail($to,$email_subject,$email_body,$headers);
-
-//redirect to the 'thank you' page
-
-header('Location: html/contact-form-thank-you.html');
-
-}
+	$to = $myemail; 
+	$email_subject = "Contact form submission: $name";
+	$email_body = "You have received a new message. ".
+	" Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message"; 
+	
+	$headers = "From: $myemail\n"; 
+	$headers .= "Reply-To: $email_address";
+	
+	mail($to,$email_subject,$email_body,$headers);
+	//redirect to the 'thank you' page
+	header('Location: contact-form-thank-you.html');
+} 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
