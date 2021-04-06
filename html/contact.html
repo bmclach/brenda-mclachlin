@@ -47,20 +47,12 @@ action="https://docs.google.com/forms/d/e/1FAIpQLSfe0bJkd1LWzsI8iejTLsoPjOuJiCX7
         </p>
 </form>	
 
-<script language="JavaScript">
-
-var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name"); 
-frmvalidator.addValidation("email","req","Please provide your email"); 
-frmvalidator.addValidation("email","email","Please enter a valid email address"); 
-</script>
-    
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     
 <script type="text/javascript">
-$('#contactform').on('submit', function(e) {
-  $('#contactform *').fadeOut(2000);
-  $('#contactform').prepend('Your submission has been processed...');
+$('#form').on('submit', function(e) {
+  $('#form *').fadeOut(2000);
+  $('#form').prepend('Your submission has been processed...');
   });
 </script>
     
