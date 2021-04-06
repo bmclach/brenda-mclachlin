@@ -31,24 +31,34 @@
       <p> Cell Number: 519-709-1063</p>
     </div>
        <form method="POST" name="contactform"
-action="http://formspree.io/bmclach3@gmail.com" id = "form">
+action="https://docs.google.com/forms/d/e/1FAIpQLSfe0bJkd1LWzsI8iejTLsoPjOuJiCX7YBbexVjtR6GbJq-rFg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;" id = "form">
      <p> Your Name:
-    <input type="text" name="name">
+    <input type="text" name="entry.1892385202">
        </p>
       <p>
       Email Address:
-    <input type="text" name="email">
+    <input type="text" name="entry.971859849">
         </p>
       <p>
       Message:
-    <textarea id = "message" name="message"></textarea>
+    <textarea id = "message" name="entry.600293358"></textarea>
         </p>
       <p id = "submit">
     <input type="submit" value="Submit" >
         </p>
-      
 </form>	
 
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+    
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
+    
  <script language="JavaScript">
 
 var frmvalidator  = new Validator("contactform");
