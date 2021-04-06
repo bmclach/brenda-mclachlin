@@ -49,10 +49,12 @@ action="https://docs.google.com/forms/d/e/1FAIpQLSfe0bJkd1LWzsI8iejTLsoPjOuJiCX7
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     
+<script src="../jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
-$('#form').on('submit', function(e) {
-  $('#form *').fadeOut(2000);
-  $('#form').prepend('Your submission has been processed...');
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
   });
 </script>
     
