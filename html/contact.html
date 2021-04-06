@@ -44,21 +44,19 @@ action="https://docs.google.com/forms/d/e/1FAIpQLSfe0bJkd1LWzsI8iejTLsoPjOuJiCX7
       Message:
     <textarea id = "message" name="entry.600293358"></textarea>
         </p>
-      <p id = "submit">
-    <input type="submit" value="Submit" >
+      <p id = "submit" onclick="myFunction()">
+    <input type="submit" value="Submit" onclick="myFunction()">
         </p>
 </form>	
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     
-
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
-  });
-</script>
-    
+<script>
+function myFunction() {
+  var x = document.getElementById("form");
+    x.style.display = "none";
+}    
+    </script>
 
   <footer id = "footer">© Oh yeah did I mention I made this website myself from scratch? 2021</footer>
   </body>
