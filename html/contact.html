@@ -29,7 +29,7 @@
       <p> Cell Number: 519-709-1063</p>
     </div>
     <script type="text/javascript">var submitted=false;</script>
-       <form method="POST" name="contactform"
+       <form name="contactform"
 action="https://docs.google.com/forms/d/e/1FAIpQLSfe0bJkd1LWzsI8iejTLsoPjOuJiCX7YBbexVjtR6GbJq-rFg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;" id = "form">
      <p> Your Name:
     <input type="text" name="entry.1892385202">
@@ -58,9 +58,9 @@ frmvalidator.addValidation("email","email","Please enter a valid email address")
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     
 <script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
+$('#contactform').on('submit', function(e) {
+  $('#contactform *').fadeOut(2000);
+  $('#contactform').prepend('Your submission has been processed...');
   });
 </script>
     
