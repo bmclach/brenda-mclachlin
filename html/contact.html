@@ -1,7 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
   <head>
-   <script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
    <link rel="stylesheet" type="text/css" href="../css/contact.css">
    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
   </head>
@@ -30,6 +28,7 @@
       <p> Email: bmclach3@gmail.com</p>
       <p> Cell Number: 519-709-1063</p>
     </div>
+    <script type="text/javascript">var submitted=false;</script>
        <form method="POST" name="contactform"
 action="https://docs.google.com/forms/d/e/1FAIpQLSfe0bJkd1LWzsI8iejTLsoPjOuJiCX7YBbexVjtR6GbJq-rFg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;" id = "form">
      <p> Your Name:
@@ -48,10 +47,16 @@ action="https://docs.google.com/forms/d/e/1FAIpQLSfe0bJkd1LWzsI8iejTLsoPjOuJiCX7
         </p>
 </form>	
 
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+<script language="JavaScript">
+
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+</script>
     
-<script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted=false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+    
 <script type="text/javascript">
 $('#gform').on('submit', function(e) {
   $('#gform *').fadeOut(2000);
@@ -59,13 +64,7 @@ $('#gform').on('submit', function(e) {
   });
 </script>
     
- <script language="JavaScript">
 
-var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name"); 
-frmvalidator.addValidation("email","req","Please provide your email"); 
-frmvalidator.addValidation("email","email","Please enter a valid email address"); 
-</script>
   <footer id = "footer">© Oh yeah did I mention I made this website myself from scratch? 2021</footer>
   </body>
 </html>
