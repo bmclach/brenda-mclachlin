@@ -2,6 +2,8 @@
   <head>
    <link rel="stylesheet" type="text/css" href="../css/contact.css">
    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="../jquery.min.js"></script>
+    
   </head>
     
   <h1> Brenda McLachlin </h1>
@@ -49,8 +51,7 @@ action="https://docs.google.com/forms/d/e/1FAIpQLSfe0bJkd1LWzsI8iejTLsoPjOuJiCX7
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     
-<script src="../jquery.min.js"></script>
-<script type="text/javascript">var submitted=false;</script>
+
 <script type="text/javascript">
 $('#gform').on('submit', function(e) {
   $('#gform *').fadeOut(2000);
