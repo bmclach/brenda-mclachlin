@@ -18,16 +18,17 @@
     </div>
     
     <p id = "title"> Background & Qualifications </p>
-    <h2 class = "menu" id = "menu1" onclick = "menu_1()"> Teaching & Childcare Experience </h2>
+    <h2 class = "menu" id = "menu1"> Teaching & Childcare Experience </h2>
     <h2 class = "menu" id = "menu2"> Practical Credentials </h2>
     <h2 class = "menu" id = "menu3"> Educational Records & Awards </h2>
    
-     <script>
-    function menu_1() {
-  var menu1 = document.getElementById("menu1");
-    menu1.style.borderRadius = "0px";
-  }
-    </script> 
+ <script>
+document.getElementById("menu1").onclick = function() {menu_1()};
+
+function menu_1() {
+  document.getElementById("menu1").style.borderRadius = "0px";
+}
+</script>
     
     
     
