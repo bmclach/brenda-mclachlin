@@ -75,11 +75,12 @@ h1 {
   font-size: 40px;
   margin-left: 10%;
   margin-right: 30%;
+  margin-bottom: 0px;
   padding: 10px;
 }
 
 #menu1 {
-  border-radius: 30px;
+  borderRadius: 30px;
   display: block;
 }
 
@@ -93,12 +94,66 @@ h1 {
   display: block;
 }
 
+.dropdown {
+  background: #EAB485;
+  border-radius: 0px 0px 30px 30px;
+  font-size: 20px;
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 0px;
+  padding: 10px;
+}
+
+.dropdown > ul > li {
+  padding: 10px;
+}
+
+#drop1 {
+  display: none;
+}
+
+#drop2 {
+  display: none;
+}
+
+#drop3 {
+  display: none;
+}
+
 #main-text {
   color: #ffffff;
   font-size: 30px;
   margin-left: 10%;
   margin-right: 30%;
   margin-bottom: 60px;
+}
+
+#main-text > p {
+  text-indent: 80px;
+}
+
+#contact {
+  margin-left: 30%;
+  margin-right: 47%;
+}
+
+#contact > a {
+  text-decoration: none;
+}
+
+#contact > a > p {
+  background: #EAB485;
+  color: #140636;
+  text-align: center;
+  font-size: 60px;
+  
+  padding: 20px;
+  border-radius: 30px;
+}
+
+#contact > a > p:hover {
+  background: #D17523;
+  color: #ffffff;
 }
 
 #footer {
